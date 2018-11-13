@@ -1,5 +1,5 @@
 var express = require("express");
-// var path = require("express");
+// var path = require("path");
 var htmlRoutes = require('./app/routing/htmlRoutes');
 var apiRoutes = require('./app/routing/apiRoutes');
 var bodyParser = require('body-parser');
