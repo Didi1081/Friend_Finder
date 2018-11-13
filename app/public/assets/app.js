@@ -1,9 +1,9 @@
-$('#test').on('click', function() {
+$('#test').on('click', function () {
     alert('this works');
 })
 
 
-$('#submit').on('click', function(){
+$('#submit').on('click', function () {
     var friend = {
         name: $('#name').val(),
         photo: $('#photo').val(),
@@ -24,18 +24,18 @@ $('#submit').on('click', function(){
 
     var modal = document.getElementById('myModal');
 
-    $.post('/api/friend', friend, function(result){
+    $.post('/api/friend', friend, function (result) {
         console.log(result, '----------- this is the best match -------------');
-        alert(result.name,);
+        alert(result.name);
 
         //modal
-        
 
-    modal.style.display = "block";
 
-    $("#img01").text(result.name);
-    $("#img02").attr("src", result.photo)
-  });
-  //end modal test
-        
+        modal.style.display = "block";
+
+        $("#img01").text(result.name);
+        $("#img02").attr("src", result.photo)
     });
+    //end modal test
+
+});
