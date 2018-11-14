@@ -1,292 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>Friend Finder</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- Favicons -->
+  <link href="data:image/png;base64,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" rel="icon">
+  <link href="data:image/png;base64,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" rel="apple-touch-icon">
 
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700&subset=latin,cyrillic-ext" rel="stylesheet">
 
-  <!-- Chosen -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/photostack/photostack.css" rel="stylesheet">
+  <link href="lib/fullpage-menu/fullpage-menu.css" rel="stylesheet">
+  <link href="lib/cubeportfolio/cubeportfolio.css" rel="stylesheet">
+  <link href="lib/superslides/superslides.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+ 
 </head>
 
 <body>
-    <!-- <h1>This  is our survey page</h1> -->
-    <!-- <button id="test">test</button> -->
 
-    <div class="container">
+  
 
-        <h2>Survey Questions</h2>
-        <hr>
-    
-        <h3><strong>About You</strong></h3>
-        <h4>Name (Required)</h4>
-        <input type="text" id="name" class="form-control" required>
-    
-        <h4>Link to Photo Image (Required)</h4>
-        <input type="text" id="photo" class="form-control" required>
-    
-        <hr>
-    
-        <h3><strong>Question 1</strong></h3>
-        <h4>Your mind is always on potato chips.</h4>
-        <select class="chosen-select" id="question1">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-        <h3><strong>Question 2</strong></h3>
-        <h4> You are a clean freak.</h4>
-        <select class="chosen-select" id="question2">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-    
-        <h3><strong>Question 3</strong></h3>
-        <h4>You like dinosaurs.</h4>
-        <select class="chosen-select" id="question3">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-    
-        <h3><strong>Question 4</strong></h3>
-        <h4>You hide your feelings by telling jokes.</h4>
-        <select class="chosen-select" id="question4">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-    
-        <h3><strong>Question 5</strong></h3>
-        <h4>You are a cat person.</h4>
-        <select class="chosen-select" id="question5">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-    
-        <h3><strong>Question 6</strong></h3>
-        <h4>You like acting.</h4>
-        <select class="chosen-select" id="question6">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-    
-        <h3><strong>Question 7</strong></h3>
-        <h4>You like to sing or karoke.</h4>
-        <select class="chosen-select" id="question7">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-        <h3><strong>Question 8</strong></h3>
-        <h4>You are always working on your hair.</h4>
-        <select class="chosen-select" id="question8">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-        <h3><strong>Question 9</strong></h3>
-        <h4>You like to hang out at coffee houses.</h4>
-        <select class="chosen-select" id="question9">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-        <h3><strong>Question 10</strong></h3>
-        <h4>You would do anything to help your friends out.</h4>
-        <select class="chosen-select" id="question10">
-          <option value=""></option>
-          <option value="1">1 (Strongly Disagree)</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5 (Strongly Agree)</option>
-        </select>
-    
-        <br>
-        <br>
-    
-        <!-- Submit Button -->
-        <button  class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
-         Submit</button>
-    
-        <hr>
-        <footer class="footer">
-          <div class="container">
-          
-          </div>
-        </footer>
-    
+  <section id="photostack-1" class="photostack photostack-start">
+    <div>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/1.jpg" alt="img01"/></a>
+        <figcaption>
+          <h2 class="photostack-title"><h6>Question 1</h6>
+            <h6>You like potato chips.</h6>
+            <select class="chosen-select" id="question1">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select></h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/2.jpg" alt="img02"/></a>
+        <figcaption>
+          <h2 class="photostack-title"><h6><strong>Question 2</strong></h6>
+            <h6> You are a clean freak.</h6>
+            <select class="chosen-select" id="question2">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select></h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/3.jpg" alt="img03"/></a>
+        <figcaption>
+          <h2 class="photostack-title"> <h6><strong>Question 3</strong></h6>
+            <h6>You like dinosaurs.</h6>
+            <select class="chosen-select" id="question3">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select></h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/4.jpg" alt="img04"/></a>
+        <figcaption>
+          <h2 class="photostack-title"><h6><strong>Question 4</strong></h6>
+            <h6>You like to tell jokes.</h6>
+            <select class="chosen-select" id="question4">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select></h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/5.jpg" alt="img05"/></a>
+        <figcaption>
+          <h2 class="photostack-title"> <h6><strong>Question 5</strong></h6>
+            <h6>You are a cat person.</h6>
+            <select class="chosen-select" id="question5">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select></h2>
+        </figcaption>
+      </figure>
+      <figure>
+        <a href="#" class="photostack-img"><img src="img/6.jpg" alt="img06"/></a>
+        <figcaption>
+          <h2 class="photostack-title"> <h6><strong>Question 6</strong></h6>
+            <h6>You like acting.</h6>
+            <select class="chosen-select" id="question6">
+              <option value=""></option>
+              <option value="1">1 (Strongly Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Strongly Agree)</option>
+            </select></h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/7.jpg" alt="img07"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Lovely Green</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/8.jpg" alt="img08"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Wonderful</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/9.jpg" alt="img09"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Love Addict</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/10.jpg" alt="img10"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Friendship</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/11.jpg" alt="img11"/></a>
+        <figcaption>
+          <h2 class="photostack-title">White Nights</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/12.jpg" alt="img12"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Serendipity</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/13.jpg" alt="img13"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Pure Soul</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/14.jpg" alt="img14"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Winds of Peace</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/15.jpg" alt="img15"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Shades of blue</h2>
+        </figcaption>
+      </figure>
+      <figure data-dummy>
+        <a href="#" class="photostack-img"><img src="img/16.jpg" alt="img16"/></a>
+        <figcaption>
+          <h2 class="photostack-title">Lightness</h2>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  
+  <button  class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+    Submit</button>
+
+  <div class="container">
+    <div class="row mt presentation">
+      <img class="camera aligncenter" src="img/camera.png" alt="">
+      <h1 class="centered">Friend Finder</h1>
+      <hr>
+
+      <div class="col-lg-4 col-md-4">
+        <h3>About Our Company</h3>
       </div>
 
-      <!-- //MODAL test -->
-      <div id="myModal" class="modal">
-        <img class="modal-content" id="img01">
-        <img class="modal-content" id="img02">
-        
+      <div class="col-lg-4 col-md-4">
+        <p> We run the world’s first and by far the largest friend finding network with one goal in mind: bringing in like-minded people together for long lasting friendships.</p>
+      </div>
+
+      <div class="col-lg-4 col-md-4">
+        <p><strong>How it works.</strong>   Simply click on view gallery and answer the 5 questions. Then hit submit and a picture of your perfect friend will appear! Have fun. </p>
+      </div>
     </div>
-</div>
-
-       <!-- //MODAL test -->
-
 
     
-      <!-- Modal
-      <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-    
-          Modal content
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h2 class="modal-title"><strong>Best Match</strong></h2>
-            </div>
-            <div class="modal-body">
-              <h2 id="match-name"></h2>
-              <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+    <!-- /row -->
+
+    <div class="row mt2">
+      <div class="col-md-12 centered">
+        <div class="col-md-4 services-bordered">
+            <i class="icon ion-ios7-monitor-outline large-icon"></i>
+            <h4>1. START SURVEY</h4>
+            
+          
+
+          
+
+        </div>
+
+        <div class="col-md-4 services-bordered">
+
+            <i class="icon ion-ios7-pie-outline large-icon"></i>
+            <h4>2. ANSWER QUESTIONS</h4>
+            
+
+          
+        </div>
+
+        <div class="col-md-4 services-bordered">
+            <i class="icon ion-ios7-plus-empty large-icon"></i>
+            <h4>3. SELECT NEXT</h4>
+            
+          
+
+        
+        </div>
+
+        <div class="col-md-4 services-bordered">
+            <i class="icon ion-ios7-lightbulb-outline large-icon"></i>
+            <h4>4. SUBMIT WHEN DONE</h4>
+          
+
+          
+        </div>
+
+        <div class="col-md-4 services-bordered">
+            <i class="icon ion-ios7-heart-outline large-icon"></i>
+         
+          <h4>5. YOUR MATCH APPEARS</h4>
+         
+
+        </div>
+        
+        <div class="col-md-4 services-bordered">
+
+            <i class="icon ion-ios7-wineglass-outline large-icon"></i>
+            <h4>6. CONNECT</h4>
+           
+
+          
+
+        </div>
+      </div>
+    </div>
+
+   
+  
+  
+  <!-- end:Clients section -->
+  </div>
+
+  <div id="myModal" class="modal">
+      <img class="modal-content" id="img01">
+      <img class="modal-content" id="img02">
+      
+  </div>
+ 
+
+ 
+        <p>...</p>
+        <div class="credits">
     
         </div>
-      </div> -->
+      </div>
+    </div>
+  </section>
 
-      <!-- <script type="text/javascript">
-        // Chosen CSS
-        var config = {
-          ".chosen-select": {},
-          ".chosen-select-deselect": {
-            allow_single_deselect: true
-          },
-          ".chosen-select-no-single": {
-            disable_search_threshold: 10
-          },
-          ".chosen-select-no-results": {
-            no_results_text: "Oops, nothing found!"
-          },
-          ".chosen-select-width": {
-            width: "95%"
-          }
-        };
-    
-        for (var selector in config) {
-          $(selector).chosen(config[selector]);
-        }
-    
-        // Capture the form inputs
-        $("#submit").on("click", function(event) {
-          event.preventDefault();
-    
-          // Form validation
-          function validateForm() {
-            var isValid = true;
-            $(".form-control").each(function() {
-              if ($(this).val() === "") {
-                isValid = false;
-              }
-            });
-    
-            $(".chosen-select").each(function() {
-    
-              if ($(this).val() === "") {
-                isValid = false;
-              }
-            });
-            return isValid;
-          }
-    
-          // If all required fields are filled
-          if (validateForm()) {
-            // Create an object for the user"s data
-            var userData = {
-              name: $("#name").val(),
-              photo: $("#photo").val(),
-              scores: [
-                $("#question1").val(),
-                $("#question2").val(),
-                $("#question3").val(),
-                $("#question4").val(),
-                $("#question5").val(),
-                $("#question6").val(),
-                $("#question7").val(),
-                $("#question8").val(),
-                $("#question9").val(),
-                $("#question10").val()
-              ]
-            };
-    
-            // AJAX post the data to the friends API.
-            $.post("/api/friends", userData, function(data) {
-    
-              // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-              $("#match-name").text(data.name);
-              $("#match-img").attr("src", data.photo);
-    
-              // Show the modal with the best match
-              $("#results-modal").modal("toggle");
-    
-            });
-          } else {
-            alert("Please fill out all fields before submitting!");
-          }
-        });
-      </script> -->
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/modernizr/modernizr.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/cubeportfolio/cubeportfolio.js"></script>
+  <script src="lib/classie/classie.js"></script>
+  <script src="lib/fullpage-menu/fullpage-menu.js"></script>
+  <script src="lib/photostack/photostack.js"></script>
+  <script src="lib/superslides/superslides.js"></script>
 
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="./assets/app.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./assets/app.js"></script>
 </body>
 </html>
