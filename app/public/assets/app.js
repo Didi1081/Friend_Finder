@@ -14,10 +14,10 @@ $('#submit').on('click', function () {
             $('#question4').val(),
             $('#question5').val(),
             $('#question6').val(),
-            // $("#question7").val(),
-            // $('#question8').val(),
-            // $('#question9').val(),
-            // $('#question10').val()
+            $("#question7").val(),
+            $('#question8').val(),
+            $('#question9').val(),
+            $('#question10').val()
 
         ]
     }
@@ -42,6 +42,7 @@ $('#submit').on('click', function () {
 
         $("#img01").attr("src", "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/9/9c/Hi_friends.png/revision/latest?cb=20161229005958");
         $("#img02").attr("src", result.photo);
+        $("#img03").text(data.name);
 
     });
     //end modal test
