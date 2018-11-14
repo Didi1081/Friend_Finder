@@ -26,15 +26,23 @@ $('#submit').on('click', function () {
 
     $.post('/api/friend', friend, function (result) {
         console.log(result, '----------- this is the best match -------------');
-        alert(result.name);
+        // alert(result.name);
+        //  $("#match-name").text(data.name);
+        //   $("#match-img").attr("src", data.photo);
+
+        //   // Show the modal with the best match
+        //   $("#results-modal").modal("toggle");
+
+        // });
 
         //modal
 
 
         modal.style.display = "block";
 
-        $("#img01").text(result.name);
-        $("#img02").attr("src", result.photo)
+        $("#img01").attr("src", "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/9/9c/Hi_friends.png/revision/latest?cb=20161229005958");
+        $("#img02").attr("src", result.photo);
+
     });
     //end modal test
 
