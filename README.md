@@ -1,7 +1,7 @@
 # Friend_Finder
 
 ## Overview
-Friend Finder a simple dating app. The application is using Node.js and Express server on the back end and the Bootstrap framework on the front end.
+Friend Finder is a simple dating app using a survey to match you up with a friend. The application is using Node.js and Express server on the back end and the Bootstrap framework on the front end.
 
 ## Live Link
 https://infinite-forest-31380.herokuapp.com/
