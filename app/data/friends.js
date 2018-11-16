@@ -1,6 +1,6 @@
 var friendsArray = [{
     "name": "Rachel",
-    "photo": "https://pixel.nymag.com/imgs/daily/vulture/2014/12/17/17-rachel-green-jewish.w700.h700.jpg",
+    "photo": "https://vignette.wikia.nocookie.net/centralperkfriends/images/b/b2/Pic_1212143429_11.jpg/revision/latest?cb=20110603052045",
     "scores": [
         5,
         1,
