@@ -46,7 +46,7 @@ https://infinite-forest-31380.herokuapp.com/
 
 ![](https://github.com/Didi1081/Friend_Finder/blob/master/ss2.png)
 
-3. Answer the question by click on the drop down. Then go to the next question by clicking the navigation dots under the picture.
+3. Answer the question by clicking on the drop down bar. To go to the next question, click on the navigation dots under picture.
 
 ![](https://github.com/Didi1081/Friend_Finder/blob/master/ss3.png)
 
