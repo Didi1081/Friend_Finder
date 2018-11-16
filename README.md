@@ -36,3 +36,13 @@ https://infinite-forest-31380.herokuapp.com/
  * Example  ```export PORT=3030```
 5. You can then access it locally from your browser at the URL ```localhost:3030```
 
+## User Guide - Navigation of the App
+
+1. Enter name and link to photo in the login page. Then hit the login button. 
+2. Click Start Survey
+3. Answer the question by click on the drop down. Then go to the next question by clicking the navigation dots under the picture.
+4. When all six questions are completed click the big submit buttion. 
+5. Your friend will appear. 
+6. click on ```ctr r ``` to refresh the app. 
+
+
