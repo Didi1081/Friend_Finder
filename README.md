@@ -6,7 +6,7 @@ Friend Finder a simple dating app. The application is using Node.js and Express 
 ## Demo
 
 
-![Demo](https://user-images.githubusercontent.com/42124030/47970470-6c5cf300-e04b-11e8-9159-3e15bf04a8f8.gif)
+![Demo](https://github.com/Didi1081/Friend_Finder/blob/master/friendfinder.gif)
 
 ### <a href="https://drive.google.com/file/d/1q-segiVV4eBRqFYP0YW_-jw1dDKZmLKN/view"> Click here for a Demo</a>
 
