@@ -39,10 +39,23 @@ https://infinite-forest-31380.herokuapp.com/
 ## User Guide - Navigation of the App
 
 1. Enter name and link to photo in the login page. Then hit the login button. 
+
+![](https://github.com/Didi1081/Friend_Finder/blob/master/ss1.png)
+
 2. Click Start Survey
+
+![](https://github.com/Didi1081/Friend_Finder/blob/master/ss2.png)
+
 3. Answer the question by click on the drop down. Then go to the next question by clicking the navigation dots under the picture.
+
+![](https://github.com/Didi1081/Friend_Finder/blob/master/ss3.png)
+
 4. When all six questions are completed click the big submit buttion. 
+
 5. Your friend will appear. 
+
+![](https://github.com/Didi1081/Friend_Finder/blob/master/ss4.png)
+
 6. click on ```ctr +  r ``` to refresh the app. 
 
 
