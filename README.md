@@ -30,7 +30,7 @@ https://infinite-forest-31380.herokuapp.com/
 ## User Guide - Installation/Running Locally
 
 1. Clone Repo
-2. cd ```friend-finder ```
+2. cd ```friend_finder ```
 3. Run Terminal ```npm install```
 4. Set the PORT environment variable
  * Example  ```export PORT=3030```
